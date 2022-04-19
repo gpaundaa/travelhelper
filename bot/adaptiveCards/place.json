@@ -1,0 +1,86 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+      {
+          "type": "Container",
+          "items": [
+              {
+                  "type": "TextBlock",
+                  "text": "${name}",
+                  "wrap": true,
+                  "weight": "bolder",
+                  "fontType": "Default",
+                  "size": "ExtraLarge"
+              },
+                {
+                    "type": "TextBlock",
+                    "text": "City",
+                    "wrap": true,
+                    "weight": "bolder",
+                    "fontType": "Default",
+                    "size": "Small",
+                    "spacing": "None"
+                }
+            ]
+      },
+      {
+          "type": "FactSet",
+          "facts": [
+              {
+                  "title": "Population",
+                  "value": "${population}"
+              },
+              {
+                  "title": "Safety ",
+                  "value": "${safety}"
+              }
+          ],
+          "spacing": "Small",
+          "height": "stretch"
+      }
+    ], 
+        "actions": [
+              
+            {
+                "type": "Action.OpenUrl",
+                "title": "More about city",
+                "url": "${wikipedia_url}"
+            },
+            {
+                "type": "Action.OpenUrl",
+                "title": "Events",
+                "url": "${google_events_url}"
+            },
+            {
+                "type": "Action.OpenUrl",
+                "title": "Look for accommodation",
+                "url": "${vrbo_url}"
+            },
+            {
+                "type": "Action.ShowCard",
+                "title": "Attractions",
+                "card": {
+                    "type": "AdaptiveCard",
+                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                    "version": "1.5",
+                    "body": [
+                        {
+                            "type": "Container",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Attractions",
+                                    "wrap": true,
+                                    "weight": "bolder",
+                                    "fontType": "Default",
+                                    "size": "ExtraLarge"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+          ]
+}

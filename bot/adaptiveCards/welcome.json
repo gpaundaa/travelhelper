@@ -1,0 +1,25 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Large",
+      "weight": "Bolder",
+      "text": "Hello, ${name}! I am Travel Helper by KOTIKO"
+    },
+    {
+      "type": "TextBlock",
+      "text": "I can you help search informations about place where are you now or where will be (for example: weather, attraction etc.). You need only send to me name city, country or other place and I send to you all informations about it.",
+      "wrap": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Learn more about bot",
+      "url": "https://docs.microsoft.com/en-us/adaptive-cards/"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4"
+}
